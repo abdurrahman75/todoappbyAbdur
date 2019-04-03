@@ -4,10 +4,8 @@ import { withStyles } from '@material-ui/core/styles';
 import {MuiThemeProvider} from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Button from '@material-ui/core/Button';
 import theme from "../theme";
-import todoapplogo from "../todoapplogo.png";
-import {Link} from "react-router-dom";
+import Typography from '@material-ui/core/Typography';
 
 const styles = {
   root: {
@@ -23,6 +21,9 @@ const styles = {
   icon: {
     margin: theme.spacing.unit * 2,
   },
+  appbar: {
+    alignItems: 'center',
+  }
 
 
 };
@@ -33,12 +34,12 @@ function ButtonAppBar(props) {
   const { classes } = props;
   return (
     <div className={classes.root}>
-      <AppBar position="static" >
+      <AppBar position="static" className={classes.appbar}>
         <Toolbar>
-        <img src={todoapplogo} alt="Todo App" height= '50' width='100' style={{marginRight:50}}/>
-           <MuiThemeProvider theme={theme}>
-            <Link to="/create-todo">  <Button color="primary" > Create Todo</Button> </Link>
-            <Link to="/edit/:id"> <Button color="primary"> Edit Todo </Button></Link>
+          <MuiThemeProvider theme={theme}>
+            <Typography variant="h6" color ='secondary'>
+             Todo App created by Abdur Rahman
+            </Typography> 
            </MuiThemeProvider>
         </Toolbar>
       </AppBar>

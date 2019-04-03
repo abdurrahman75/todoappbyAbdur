@@ -36,8 +36,8 @@ export default class TodosList extends Component {
         })
     }
 
-    render() {
-        return (
+    render() { 
+         return (
             <div>
                 <h3>Todos List</h3>
                 <table className="table table-striped" style={{ marginTop: 20 }} >
@@ -53,7 +53,7 @@ export default class TodosList extends Component {
                         { this.todoList() }
                     </tbody>
                 </table>
-            </div>
-        )
+             </div>
+        );
     }
 }
