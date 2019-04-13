@@ -5,7 +5,7 @@ import EditTodo from "./components/edit-todo";
 import TodosList from "./components/todo-list";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import 'bootstrap/dist/css/bootstrap.css';
+
 import './App.css';
 
 class App extends Component{

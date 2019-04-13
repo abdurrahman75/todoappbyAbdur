@@ -35,10 +35,10 @@ function ButtonAppBar(props) {
     <div className={classes.root}>
       <AppBar position="static" >
         <Toolbar>
-        <img src={todoapplogo} alt="Todo App" height= '50' width='100' style={{marginRight:50}}/>
+        <a href="http://localhost:3000/"><img src={todoapplogo} alt="Todo App" height= '50' width='100' style={{marginRight:50}} /></a>
            <MuiThemeProvider theme={theme}>
-            <Link to="/create-todo">  <Button color="primary" > Create Todo</Button> </Link>
-            <Link to="/edit/:id"> <Button color="primary"> Edit Todo </Button></Link>
+            <Link to="/"> <Button color="primary"> Todo List</Button> </Link>
+            <Link to="/create-todo"> <Button color="primary"> Create Todo</Button></Link>
            </MuiThemeProvider>
         </Toolbar>
       </AppBar>
