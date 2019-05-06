@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { MDBContainer, MDBRow, MDBCol, MDBBtn } from 'mdbreact';
+
 
 export default class EditTodo extends Component {
 
@@ -75,27 +77,33 @@ export default class EditTodo extends Component {
 
     render() {
         return (
+
             <div>
-                <h3 align="center">Update Todo</h3>
-                <form onSubmit={this.onSubmit}>
-                    <div className="form-group"> 
-                        <label>Description: </label>
-                        <input  type="text"
-                                className="form-control"
-                                value={this.state.todo_description}
-                                onChange={this.onChangeTodoDescription}
-                                />
-                    </div>
-                    <div className="form-group">
-                        <label>Responsible: </label>
-                        <input 
-                                type="text" 
-                                className="form-control"
-                                value={this.state.todo_responsible}
-                                onChange={this.onChangeTodoResponsible}
-                                />
-                    </div>
-                    <div className="form-group">
+                <h3 align="center" className="text-white font-weight-bold">Update Todo</h3>
+    <MDBContainer>
+      <MDBRow>
+        <MDBCol md="6">
+          <form onSubmit={this.onSubmit} classname="bg-color">
+            <label htmlFor="textAreaForDescription"  className="text-white font-weight-bold">
+              Description:
+            </label>
+            <input
+              type="text"
+              value={this.state.todo_description}
+              onChange={this.onChangeTodoDescription}
+              className="form-control"
+            />
+            <br />
+            <label htmlFor="textForResponsible"  className="text-white font-weight-bold">
+              Responsible:
+            </label>
+            <input
+              type="text"
+              className="form-control"
+               value={this.state.todo_responsible}
+             onChange={this.onChangeTodoResponsible}
+            />
+            <div className="form-group">
                         <div className="form-check form-check-inline">
                             <input  className="form-check-input" 
                                     type="radio" 
@@ -107,6 +115,7 @@ export default class EditTodo extends Component {
                                     />
                             <label className="form-check-label">Low</label>
                         </div>
+                    </div>
                         <div className="form-check form-check-inline">
                             <input  className="form-check-input" 
                                     type="radio" 
@@ -129,8 +138,7 @@ export default class EditTodo extends Component {
                                     />
                             <label className="form-check-label">High</label>
                         </div>
-                    </div>
-                    <div className="form-check">
+            <div className="form-check">
                         <input  className="form-check-input"
                                 id="completedCheckbox"
                                 type="checkbox"
@@ -142,15 +150,17 @@ export default class EditTodo extends Component {
                         <label className="form-check-label" htmlFor="completedCheckbox">
                             Completed
                         </label>                        
-                    </div>
-
-                    <br />
-
-                    <div className="form-group">
-                        <input type="submit" value="Update Todo" className="btn btn-primary" />
-                    </div>
-                </form>
             </div>
+            <div className="text-center mt-4 ">
+              <MDBBtn color="indigo" type="submit" className="text-white font-weight-bold">Update Todo</MDBBtn>
+            </div>
+          </form>
+        </MDBCol>
+      </MDBRow>
+    </MDBContainer>
+
+             </div>
+
         )
     }
 }
