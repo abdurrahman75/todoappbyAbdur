@@ -35,7 +35,7 @@ function ButtonAppBar(props) {
     <div className={classes.root}>
       <AppBar position="static" >
         <Toolbar>
-        <a href="http://localhost:3000/"><img src={todoapplogo} alt="Todo App" height= '50' width='100' style={{marginRight:50}} /></a>
+        <a href="https://todoapp247.herokuapp.com"><img src={todoapplogo} alt="Todo App" height= '50' width='100' style={{marginRight:50}} /></a>
            <MuiThemeProvider theme={theme}>
             <Link to="/"> <Button color="primary"> Todo List</Button> </Link>
             <Link to="/create-todo"> <Button color="primary"> Create Todo</Button></Link>
