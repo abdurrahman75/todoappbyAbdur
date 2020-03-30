@@ -51,7 +51,7 @@ export default class CreateTodo extends Component {
         };
 
         axios.post('http://localhost:4000/todos/add', newTodo)
-            .then(res => console.log(res.data)).then(window.location.replace = "https://todoapp247.herokuapp.com/");
+            .then(res => console.log(res.data)).then(window.location.replace("https://todoapp247.herokuapp.com/"));
 
         this.setState({
             todo_description: '',
