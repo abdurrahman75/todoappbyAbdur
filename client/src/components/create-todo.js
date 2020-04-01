@@ -50,7 +50,7 @@ export default class CreateTodo extends Component {
             todo_completed: this.state.todo_completed
         };
 
-        axios.post('https://localhost:4000/todos/add', newTodo)
+        axios.post('http://localhost:4000/todos/add', newTodo)
             .then(res => console.log(res.data)).then(window.location.replace("https://todoapp247.herokuapp.com/"));
 
         this.setState({
